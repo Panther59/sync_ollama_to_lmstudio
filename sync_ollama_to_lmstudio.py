@@ -19,7 +19,7 @@ print("Starting iteration...")
 print(f"Manifest directory: {manifest_dir}")
 
 # Traverse all 'latest' files recursively in manifest directory
-for latest_file in manifest_dir.rglob("latest"):
+for latest_file in manifest_dir.rglob("*"):
     print(f"Processing: {latest_file}")
 
     # Extract user, model, tag from path

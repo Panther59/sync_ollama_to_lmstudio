@@ -4,11 +4,11 @@ import json
 from pathlib import Path
 
 # Prompt user for base and target directories
-base_dir = Path(input("Enter the base directory (e.g., F:/ollama_models): ").strip())
+base_ollama_dir = Path(input("Enter the base Ollama models directory (e.g., F:/ollama_models): ").strip())
 publicmodels_dir = Path(input("Enter the target directory for LM Studio models (e.g., F:/Models/llm_studio): ").strip())
 
-manifest_dir = base_dir / "manifests/registry.ollama.ai"
-blob_dir = base_dir / "blobs"
+manifest_dir = base_ollama_dir / "manifests/registry.ollama.ai"
+blob_dir = base_ollama_dir / "blobs"
 
 # Remove existing files in the public models directory
 if publicmodels_dir.exists():
